@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Order Request</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="custom-form-container">
+        <h1>Request a Custom Order</h1>
+        <p>Have a special design in mind? Describe it below and upload some reference images (up to 10 files). We'll get back to you with a quote!</p>
+        
+        <form id="customOrderForm" action="/submit-custom-order" method="post" enctype="multipart/form-data">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="description">Describe your customization:</label>
+            <textarea id="description" name="description" rows="8" required></textarea>
+
+            <label for="files">Upload Images (Max 10):</label>
+            <input type="file" id="files" name="files" multiple accept="image/*">
+            
+            <div id="image-preview"></div> <button type="submit">Submit Request</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
